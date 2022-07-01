@@ -1,0 +1,34 @@
+/* -----------------------------------
+ページネーション
+----------------------------------- */
+
+ul.pagination {
+  list-style: none;
+  display: flex;
+  $size: 40px;
+  margin: 60px auto 40px;
+  justify-content: center;
+
+  li {
+    margin: 0;
+
+    a {
+      display: block;
+      background: $text-color;
+      color: $white;
+      width: $size;
+      height: $size;
+      line-height: $size;
+      text-align: center;
+      margin-left: 1px;
+
+      &:hover {
+        background: $link-color;
+      }
+
+      &.active {
+        background: $link-color;
+      }
+    }
+  }
+}

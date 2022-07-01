@@ -1,0 +1,71 @@
+/* -----------------------------------
+ベース設定
+----------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* ※001 - 背景色の変更↓ */
+  background-color: $background-color;
+  /* ※002 - 文字色の変更↓ */
+  color: $text-color;
+  /* ※003 - 基本フォントの変更↓ */
+  font-family: $font-normal;
+  padding: 0;
+  margin: 0;
+  /* ※004 - 背景を画像で覆いたい場合
+  background-image: url('../img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  */
+}
+/* つけるとスマホでしか表示されなくなるクラス */
+.only-phone {
+  display: inline-block;
+  @include mq($breakpoint: sm) {
+    display: none;
+  }
+}
+/* つけるとスマホで見たときだけ表示されなくなるクラス */
+.except-phone {
+  display: none;
+  @include mq($breakpoint: sm) {
+    display: inline-block;
+  }
+}
+/* つけるとタブレットでしか表示されなくなるクラス */
+.only-pad {
+  display: none;
+  @include mq($breakpoint: sm) {
+    display: inline-block;
+  }
+  @include mq($breakpoint: md) {
+    display: none;
+  }
+}
+/* つけるとPCでしか表示されなくなるクラス */
+.only-pc {
+  display: none;
+  @include mq($breakpoint: md) {
+    display: inline-block;
+  }
+}
+/* つけるとPCで見たときだけ表示されなくなるクラス */
+.except-pc {
+  display: inline-block;
+  @include mq($breakpoint: md) {
+    display: none;
+  }
+}
+
+.footer-container,
+.header-container {
+  padding: 0 #{$pd-sm};
+  @include mq(md) {
+    padding: 0 #{$pd};
+  }
+}

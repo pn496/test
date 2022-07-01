@@ -1,0 +1,89 @@
+/* -----------------------------------
+Flexbox設定
+----------------------------------- */
+
+.footer-container,
+.header-container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-2,
+  .col-3 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-container,
+  .header-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .flex {
+    justify-content: space-between;
+
+    .col-2 {
+      width: calc(50% - 15px);
+    }
+
+    .col-3 {
+      width: calc(33.33% - 15px);
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1029px) {
+  .container,
+  .footer-container,
+  .header-container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 1030px) {
+  .container,
+  .footer-container,
+  .header-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1240px) {
+  .container,
+  .footer-container,
+  .header-container {
+    max-width: 1000px;
+  }
+}

@@ -1,0 +1,83 @@
+/* -----------------------------------
+ヘッダー
+----------------------------------- */
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: $header-height-sm;
+  @include mq(lg) {
+    height: $header-height;
+  }
+}
+
+nav#globalnav {
+  /* ※007 - メニューバーをスクロール追従したくない場合は、position: relative; に変更↓ */
+  position: fixed;
+  z-index: map-get($layer, header);
+  top: 0;
+  width: 100%;
+  height: $header-height-sm;
+  @include mq(lg) {
+    height: $header-height;
+    top: 0;
+  }
+
+  .header-container {
+    background: $white;
+    border-bottom: 1px solid #{$gray};
+    position: relative;
+    @include mq(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    line-height: $header-height-sm;
+    width: fit-content;
+    @include mq(lg) {
+      line-height: $header-height;
+    }
+
+    a {
+      /* ※008 - ヘッダーバーサイトタイトル色↓ */
+      color: $black;
+      display: block;
+      padding: 0;
+      font-size: 18px;
+
+      &:hover {
+        /* ※008 - ヘッダーバーサイトタイトルホバー色↓ */
+        color: $link-color;
+      }
+
+      img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      a {
+        display: block;
+        text-decoration: none;
+        color: $black;
+
+        &:hover {
+          /* ※009 - ヘッダーバーメニューホバー色↓ */
+          color: $link-color;
+        }
+      }
+    }
+  }
+}

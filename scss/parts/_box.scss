@@ -1,0 +1,13 @@
+/* -----------------------------------
+飾りボックス
+----------------------------------- */
+
+.box1 {
+  @include box;
+  border-radius: 3px;
+}
+
+.box2 {
+  @include box(transparent);
+  background: #f5f5f5;
+}

@@ -1,0 +1,22 @@
+/* -----------------------------------
+フッター部分
+----------------------------------- */
+
+footer {
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: $footer-height;
+
+  p {
+    margin: 15px auto;
+    font-size: 12px;
+  }
+}
+
+.footer-container {
+  /* ※012 - フッターエリアの背景色と文字色↓ */
+  background: $black;
+  color: $gray;
+  overflow: hidden;
+  min-height: $footer-height;
+}

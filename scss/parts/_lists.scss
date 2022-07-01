@@ -1,0 +1,104 @@
+/* -----------------------------------
+リストのデザイン
+----------------------------------- */
+.container {
+  ul {
+    list-style: square;
+
+    li {
+      margin-left: 30px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 5px 0 0;
+
+      li {
+        margin: 0 0 5px 40px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: number;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-left: 30px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &:before {
+        $size: 20px;
+        background: $black;
+        position: absolute;
+        counter-increment: number;
+        content: counter(number);
+        display: inline-block;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        top: 13px;
+        transform: translateY(-50%);
+        left: -25px;
+        text-align: center;
+        height: $size;
+        width: $size;
+        text-align: center;
+        line-height: $size;
+      }
+    }
+  }
+}
+
+dl {
+  margin: 40px auto;
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    border-left: 1px dotted #cccccc;
+    margin-left: 20px;
+    padding: 5px 0 5px 20px;
+  }
+}
+
+dl.update {
+  border: 1px solid #{$gray};
+  font-size: 13px;
+  border-bottom: none;
+
+  dd,
+  dt {
+    padding: 8px;
+    margin: 0;
+    border-left: none;
+  }
+
+  dd {
+    padding-top: 0;
+    border-bottom: 1px solid #{$gray};
+  }
+  @include mq(sm) {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 40px auto 40px 0;
+    $dt_size: 90px;
+
+    dt {
+      width: $dt_size;
+      padding: 8px;
+      border-bottom: 1px solid #{$gray};
+    }
+
+    dd {
+      width: calc(100% - #{$dt_size});
+      padding: 8px;
+      border-bottom: 1px solid #{$gray};
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/* -----------------------------------
+SNSリンク
+----------------------------------- */
+
+ul.sns {
+  list-style: none;
+  display: flex;
+  li {
+    margin: 0;
+    a {
+      display: block;
+    margin-right: 15px;
+      img {
+        $size: 30px;
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+// メディアクエリー
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin box($border-color: $gray) {
+  border: 1px solid #{$border-color};
+  padding: 10px;
+  margin: 40px auto;
+  @include mq(lg) {
+    padding: 15px;
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+@mixin hidden-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+// 矢印
+@mixin arrow_top($size:30px, $color:white, $border:1px) {
+  content: '';
+  width: $size;
+  height: $size;
+  display: block;
+  position: absolute;
+  border-right: #{$border} solid #{$color};
+  border-top: #{$border} solid #{$color};
+  transform: rotate(-45deg);
+}
+@mixin arrow_right($size:30px, $color:white, $border:1px) {
+  content: '';
+  width: $size;
+  height: $size;
+  display: block;
+  position: absolute;
+  border-right: #{$border} solid #{$color};
+  border-top: #{$border} solid #{$color};
+  transform: rotate(45deg);
+}
+@mixin arrow_bottom($size:30px, $color:white, $border:1px) {
+  content: '';
+  width: $size;
+  height: $size;
+  display: block;
+  position: absolute;
+  border-right: #{$border} solid #{$color};
+  border-bottom: #{$border} solid #{$color};
+  transform: rotate(45deg);
+}
+@mixin arrow_left($size:30px, $color:white, $border:1px) {
+  content: '';
+  width: $size;
+  height: $size;
+  display: block;
+  position: absolute;
+  border-left: #{$border} solid #{$color};
+  border-bottom: #{$border} solid #{$color};
+  transform: rotate(45deg);
+}

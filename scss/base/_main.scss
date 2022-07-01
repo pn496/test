@@ -1,0 +1,104 @@
+/* -----------------------------------
+メイン部分
+----------------------------------- */
+main {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+section {
+  border-top: 1px solid #{$gray};
+  padding: 10px #{$pd-sm};
+
+  &#main-visual {
+    padding: 0;
+  }
+  @include mq(md) {
+    padding: 20px #{$pd};
+  }
+
+  &.indent {
+    p {
+      /* ※010 - 小説展示用ブロックsection class="indent"中のp段落の行間と字下げ↓ */
+      line-height: 2.0em;
+      text-indent: 1em;
+    }
+  }
+}
+
+.container {
+  background: $white;
+}
+
+.two-column {
+  aside {
+    border-top: 1px solid #{$gray};
+    padding: 10px #{$pd-sm};
+    @include mq(md) {
+      padding: 20px #{$pd};
+    }
+  }
+  @include mq(lg) {
+    $aside_size: 300px;
+    display: flex;
+
+    aside {
+      width: $aside_size;
+      padding: 20px;
+      border-left: 1px solid #{$gray};
+
+      h2,
+      h3 {
+        font-size: 16px;
+        margin-top: 40px;
+      }
+
+      ol,
+      p,
+      ul {
+        font-size: 14px;
+      }
+    }
+
+    .contents {
+      width: calc(100% - #{$aside_size});
+    }
+  }
+}
+
+#main-visual {
+  $pc-height: 400px;
+  /* ※011 - スマホから見た場合のメインビジュアル画像の高さ（デフォルトは画面いっぱい）↓ */
+  height: calc(100vh - #{$header-height-sm});
+  position: relative;
+
+  &:before {
+    /* ※011 - スマホから見た場合のメインビジュアル画像にかぶせる下向き矢印↓
+    不要であれば、 #main-visual:before { ～ } を波カッコごと削除してください */
+    @include arrow_bottom($size:15px, $color:white, $border:2px);
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 20px;
+  }
+  @include mq(md) {
+    /* ※011 - PCから見た場合のメインビジュアル画像の高さ↓ */
+    height: $pc-height;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

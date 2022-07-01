@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SITE NAME</title>
+  <meta name="description" content="description">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="SITE NAME">
+
+  <!-- Twitterカード表示に必要なメタタグ
+  <meta property="og:title" content="ページタイトル">
+  <meta property="og:description" content="ページの概要">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="OGP画像の絶対パス"> -->
+
+  <!-- 検索避けタグ
+  <meta name="robots" content="noindex,nofollow,noarchive,noimageindex"> -->
+
+  <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/fuwaimg.css" rel="stylesheet">
+  <script src="js/jquery.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav id="globalnav">
+      <div class="header-container" id="headercontainer">
+        <h1 class="logo"><a href="index.html">SITE NAME</a></h1>
+        <!-- サイトタイトルに画像を使う場合は、以下のように記述します
+        <h1 class="logo"><a href="index.html"><img src="img/logo_sample.png" alt="SITE NAME"></a></h1> -->
+        <button id="menubtn">&#9776;</button>
+        <ul id="navmenu">
+          <li><a href="index.html">基本ページ</a>
+            <ul>
+              <li><a href="index_sidebar.html">サイドバーあり</a></li>
+              <li><a href="index_lists.html">作品一覧サンプル</a></li>
+              <li><a href="index_contact.html">メールフォームサンプル</a></li>
+            </ul>
+          </li>
+          <li><a href="noheader.html">ヘッダーなしページ</a>
+            <ul>
+              <li><a href="noheader_sidebar.html">サイドバーあり</a></li>
+              <li><a href="noheader_image.html">イラスト展示サンプル</a></li>
+              <li><a href="noheader_text.html">小説展示サンプル</a></li>
+            </ul>
+          </li>
+          <li><a href="enter.html">エンターページ用</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container">
+    <section>
+
+        <h2 class="center">コンタクト</h2>
+
+        <p class="center">
+          このメールフォームはこのままでは動作しません。<br>
+          <a href="https://www.php-factory.net/mail/01.php" target="_blank">MailForm01</a>などのPHPプログラムを自分で組み込む必要があります。
+        </p>
+
+      <form action="" method="post">
+        <input type="text" placeholder="NAME" name="お名前">
+        <input type="email" placeholder="EMAIL" name="Email">
+        <input type="text" placeholder="TITLE" name="題名">
+        <textarea name="内容" rows="11" cols="80"></textarea>
+        <input type="submit" value="SEND">
+      </form>
+
+    </section>
+  </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>SITE NAME</p>
+    </div>
+  </footer>
+
+  <!-- 上に戻るボタンここから -->
+  <a href="#" id="totop" class="totop-hidden"></a>
+  <!-- 上に戻るボタンここまで -->
+
+  <script src="js/common.js"></script>
+  <script src="js/fuwaimg.js"></script>
+</body>
+
+</html>

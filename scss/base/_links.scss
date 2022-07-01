@@ -1,0 +1,42 @@
+/* -----------------------------------
+リンク関係
+----------------------------------- */
+a {
+  /* ※005 - リンク色↓ */
+  color: $link-color;
+
+  img {
+    transition: 0.3s;
+  }
+
+  &:hover {
+    /* ※005 - リンクホバー色↓ */
+    color: $text-color;
+
+    img {
+      opacity: 0.6;
+    }
+  }
+}
+
+a.btn {
+  display: block;
+  /* ※006 - リンクボタン色↓ */
+  background: $text-color;
+  color: $white;
+  width: fit-content;
+  min-width: 150px;
+  text-align: center;
+  padding: 10px 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &.center {
+    margin: 40px auto;
+  }
+
+  &:hover {
+    /* ※006 - リンクボタンホバー色↓ */
+    background: $link-color;
+  }
+}

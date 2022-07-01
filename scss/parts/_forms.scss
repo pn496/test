@@ -1,0 +1,35 @@
+/* -----------------------------------
+メールフォーム
+----------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 40px auto;
+
+  input,
+  textarea {
+    font-family: $font-small;
+    border: 1px solid #c1c1c1;
+    margin: 3px 0;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 1.6em;
+
+    &::placeholder {
+      color: #c1c1c1;
+    }
+  }
+
+  input[type=button], input[type=submit] {
+    cursor: pointer;
+    border: none;
+    background: $text-color;
+    color: $white;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

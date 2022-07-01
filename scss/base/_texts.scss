@@ -1,0 +1,97 @@
+/* -----------------------------------
+見出し、テキストなど
+----------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+  line-height: 1.8em;
+
+  &.center {
+    text-align: center;
+  }
+}
+
+p {
+  margin: 0 auto 1em;
+  font-size: 15px;
+}
+
+ol,
+ul {
+  font-size: 15px;
+}
+
+code {
+  font-family: $font-small;
+  background: #f5f5f5;
+  font-size: 12px;
+  border: 1px solid #cacaca;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.6em auto 0.1em;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px auto;
+}
+
+h2 {
+  font-size: 20px;
+  @include mq($breakpoint: md) {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  position: relative;
+  padding-left: 25px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 10px;
+    background: $text-color;
+    margin: auto;
+    top: 0.8em;
+    left: 3px;
+  }
+  @include mq($breakpoint: md) {
+    font-size: 21px;
+  }
+}
+
+h4 {
+  font-size: 17px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+.marker {
+  background: linear-gradient(transparent 30%, #{$lightcolor} 30%);
+  font-weight: bold;
+}

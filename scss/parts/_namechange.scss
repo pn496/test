@@ -1,0 +1,53 @@
+/* -----------------------------------
+名前変換フォーム
+----------------------------------- */
+
+.namechange_wrap {
+  width: 400px;
+  max-width: 100%;
+  margin: 40px auto 40px 0;
+  background: $gray;
+  padding: 20px;
+
+  dl {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    dd {
+      border: none;
+      margin: 0 0 5px 15px;
+      padding: 0;
+    }
+  }
+
+  input[type=text] {
+    border: none;
+    background: transparent;
+    font-family: $font-small;
+    border-bottom: 1px solid #ccc;
+    padding: 3px 7px;
+
+    &:focus {
+      outline: none;
+      background: $white;
+    }
+  }
+
+  input[type=button] {
+    cursor: pointer;
+    border: none;
+    background: $text-color;
+    color: $white;
+    padding: 5px 15px;
+
+    &.namechange_ng {
+      background: #cccccc;
+      color: #989898;
+    }
+  }
+
+  p {
+    margin: 10px auto 0;
+  }
+}

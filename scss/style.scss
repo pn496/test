@@ -1,0 +1,18 @@
+@import "partial/**";
+@import "setting/**";
+
+@import "base/base.scss";
+@import "base/texts.scss";
+@import "base/links.scss";
+@import "base/header.scss";
+@import "base/navi-top.scss";
+// @import "base/navi-right.scss";
+@import "base/main.scss";
+@import "base/footer.scss";
+
+@import "parts/**";
+
+/* -----------------------------------
+何かCSSを書き足す場合は、ここから下に書き足すと
+あとからもとに戻したくなった場合に便利です。
+----------------------------------- */

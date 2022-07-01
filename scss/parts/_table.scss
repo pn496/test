@@ -1,0 +1,28 @@
+/* -----------------------------------
+テーブル
+----------------------------------- */
+
+table {
+  border-collapse: collapse;
+  min-width: 640px;
+
+  td,
+  th {
+    padding: 5px 14px;
+  }
+
+  tr {
+    border-top: 1px solid #{$gray};
+    border-bottom: 1px solid #{$gray};
+  }
+
+  th {
+    background: #f5f5f5;
+  }
+}
+
+.table_wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 40px auto 40px 0;
+}
